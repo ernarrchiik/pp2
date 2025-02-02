@@ -1,0 +1,7 @@
+a = [["apple","banana"],["cherry","watermelon"],["pineapple","lemon"]]
+a[0][0] = "alma"
+a.pop()
+a.append(["lemon","pineapple"])
+for i in range(0,len(a)):
+    for j in range(0,2):
+        print(a[i][j])

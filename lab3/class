@@ -1,0 +1,16 @@
+class MyClass:x = 5
+p1 = MyClass()
+print(p1.x)
+
+class Man:
+    def _init_(self,name,age):
+        self.name = name
+        self.age = age
+    def _str_(self):
+        return f"{self.name} {self.age}"
+    def my_func(abc):
+        print("My name is " + abc.name)
+p1 = Man("Ernar",18)
+
+print(p1)
+p1.my_func()

@@ -1,0 +1,19 @@
+class man:
+  def _init_(self, first, last):
+    self.firstname = first
+    self.lastname = last
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+x = man("Yernar", "Berenbai")
+x.printname()
+class student(man):
+    def _init_(self,first,last,year):
+      super()._init_(first,last)
+      self.graduationyear = year
+
+    def welcome(self):
+      print("Welcome", self.firstname, self.lastname, "to the class of", self.graduationyear)
+y = student("Aliman","Bibolov",2024)
+y.welcome()

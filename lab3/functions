@@ -1,0 +1,19 @@
+def my_function(name,age):
+        print("My name is " + name +  ", Im " + age)
+my_function("Ernar","17")
+def my_func(*kids):
+  print("The youngest child is " + kids[0])
+
+my_func("Ernar", "Aliman", "Sultan")
+def func(child3, child2, child1):
+  print("The youngest child is " + child1)
+
+func(child1 = "Ernar", child2 = "Aliman", child3 = "Sultan")
+def function(food):
+    for i in food:
+        print(i)
+fruits = ["apple","banana","cherry"]
+function(fruits)
+def fun(a):
+    return a*5
+print(fun(3))
