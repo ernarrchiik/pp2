@@ -1,0 +1,104 @@
+def ouncer(gramm):
+    return gramm*28.3495231
+print(ouncer(5))
+
+def celcie(F):
+    return (5 / 9) * (F - 32)
+print(1)
+
+def solve(numheads, numlegs):
+    y = (numlegs - 2 * numheads) / 2
+    x = numheads - y
+    if x.is_integer() and y.is_integer() and x >= 0 and y >= 0:
+        return int(x), int(y)
+    else:
+        return "Нет решения"
+
+numheads = 35
+numlegs = 94
+result = solve(numheads, numlegs)
+print(result)
+
+def is_primer(n):
+    if n < 2:
+        return False
+    else:
+        for i in range(2,n):
+            if n % i == 0:
+                return False
+        return True
+def filter_prime(numbers):
+    return [num for num in numbers if is_primer(num)]
+numbers = [1,2,3,4,5,6,7,8,9,10]
+result = filter_prime(numbers)
+print(result)
+
+
+import itertools
+def next_permutations(sentence):
+    words = sentence.split()
+    permutatuions = itertools.permutations(words)
+    for i in permutatuions:
+        print(' '.join(i))
+next_permutations('My name is Ernar')
+
+def reverse(sentense):
+    words = sentense.split()
+    reversed_words = words[::-1]
+    print(' '.join(reversed_words))
+reverse("My name is Ernar")
+
+def has_33(nums):
+    for i in range(len(nums)-1):
+        if nums[i] == 3 and nums[i+1] == 3:
+            return True
+    return False
+print(has_33([1,3,3]))
+
+def spy_game(nums):
+    for i in range(len(nums)-2):
+        if nums[i] == 0 and nums[i+1] == 0 and nums[i+2] == 7:
+            return True
+    return False
+print(spy_game([1,2,3,0,7,4,5]))
+
+import math
+def obiom(R):
+    return 4/3*math.pi*R**2
+print(obiom(5))
+
+def collection(nums):
+    unique_nums = []
+    for i in nums:
+        if i not in unique_nums:
+            unique_nums.append(i)
+    return unique_nums
+print(collection([1,2,3,4,4,4,5,5,6]))
+
+def palindrome(word):
+    return word == word[::-1]
+print(palindrome("Ernar"))
+
+def histogram(nums):
+    for i in nums:
+        print(i*'*')
+histogram([1,2,3,4])
+
+from random import randint
+
+print("Hello! What is your name?")
+m = input()
+print("Well, ", m, ", I am thinking of a number between 1 and 20.")
+print("Take a guess")
+n = randint(1, 20)
+guesses_taken = 1
+num = int(input())
+while num != n:
+    if num > n:
+        print("Too high")
+    elif num < n:
+        print("Too low")
+    print("Take a guess")
+    num = int(input())
+    guesses_taken += 1
+print(f"Good job, ",m, " ! You guessed my number in ",guesses_taken," guesses!")

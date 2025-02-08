@@ -1,0 +1,86 @@
+#1
+class MyClass:
+    def __init__(self):
+        self.tex = ""
+    def getString(self):
+        self.tex = input()
+    def printString(self):
+        print(self.tex)
+x = MyClass()
+x.getString()
+x.printString()
+
+#2
+class Shape:
+    def __init__(self):
+        self.a = 0
+    def print_a(self):
+        print(f"Area:{self.a}")
+class square(Shape):
+    def _init_(self,length):
+        super()._init_()
+        self.length = length
+        self.a = self.length**2
+sq = square(5)
+sq.print_a()
+#3
+import math
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def show(self):
+        print(f"Point({self.x},{self.y})")
+
+    def move(self, n_x, n_y):
+        self.x = n_x
+        self.y = n_y
+
+    def dist(self, other):
+        return math.sqrt((self.x - other.x) * 2 + (self.y - other.y) * 2)  
+p1 = Point(2, 3)
+p2 = Point(5, 7)
+p1.show()
+print(p1.dist(p2))
+#4
+class Account:
+    def __init__(self,owner,balance = 0):
+        self.owner = owner
+        self.balance = balance
+    def deposit(self,amount):
+        if amount >0:
+            self.balance += amount
+            print(f"{self.balance}")
+    def withdraw(self,amount):
+        if amount > 0 and amount <=self.balance:
+            self.balance -= amount
+            print(f"{self.balance}")
+        else:
+            print("Mistake")
+    def get_balance(self):
+        return self.balance
+b = Account("Ernar",100)
+b.deposit(400)
+b.withdraw(200)
+print(b.get_balance())
+#5# 
+class Primer:
+    def __init__(self,number):
+        self.number = number
+    def is_prime(self,n):
+        if n < 2:
+            return False
+        else:
+            for i in range(2,int(n)):
+                if n % i == 0:
+                    return False
+                return True
+    def filter_primes(self):
+        return list(filter(lambda x:self.is_prime(x),self.number))
+number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+prime_filter = Primer(number)
+prime_numbers = prime_filter.filter_primes()
+print(prime_numbers)

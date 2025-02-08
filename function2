@@ -1,0 +1,17 @@
+def first(movie):
+    return movie["imdb"] > 5.5
+def second(movies):
+    return [movie for movie in movies if movie["imdb"] > 5.5]
+def third(movies, category):
+    return [movie for movie in movies if movie["category"] == category]
+def fourth(movies):
+    total_imdb = sum(movie["imdb"] for movie in movies)
+    return total_imdb / len(movies) if movies else 0
+def fifth(movies, category):
+    filtered_movies = third(movies, category)
+    return fourth(filtered_movies)
+print(first(movies[0]))
+print(second(movies))
+print(third(movies, "Romance"))
+print(fourth(movies))
+print(fifth(movies, "Romance"))
