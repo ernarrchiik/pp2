@@ -1,0 +1,5 @@
+<script>start("/Users/ernarberenbaj/python/lab6/");</script>
+<script>onHasParentDirectory();</script>
+<script>addRow("A.txt","A.txt",0,13,"13 B",1741097889,"3/4/25, 7:18:09 PM");</script>
+<script>addRow("built.py","built.py",0,478,"478 B",1741098978,"3/4/25, 7:36:18 PM");</script>
+<script>addRow("file.py","file.py",0,1185,"1.2 kB",1741098977,"3/4/25, 7:36:17 PM");</script>
